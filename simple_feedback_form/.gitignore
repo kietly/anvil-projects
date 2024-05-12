@@ -1,0 +1,5 @@
+anvil-app-server.sh
+*.pyc
+*.pyo
+__pycache__
+.anvil-data

@@ -1,0 +1,52 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'NKDADH,KAJVRE'}
+    components:
+    - name: label_1
+      properties: {text: Feedback Form, role: headline}
+      type: Label
+      layout_properties: {grid_position: 'SSPXJL,RZQZVF'}
+    - name: label_2
+      properties: {text: 'Name:'}
+      type: Label
+      layout_properties: {grid_position: 'GEYQAF,JGEBTQ'}
+    - name: name_box
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'GEYQAF,DPNBFO'}
+    - name: label_3
+      properties: {text: 'Email:'}
+      type: Label
+      layout_properties: {grid_position: 'IHYTNY,BEXNNS'}
+    - name: email_box
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'IHYTNY,BEAAQM'}
+    - name: label_4
+      properties: {text: 'Feedback:'}
+      type: Label
+      layout_properties: {grid_position: 'XBNEHU,DDYWTZ'}
+    - name: feedback_box
+      properties: {}
+      type: TextArea
+      layout_properties: {grid_position: 'EYVGPC,ZLBDIM'}
+    - name: submit_button
+      properties: {text: Submit, role: primary-color}
+      type: Button
+      layout_properties: {grid_position: 'MBFVVI,YTXFWJ'}
+      event_bindings: {click: submit_button_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
